@@ -1,10 +1,33 @@
-from logging import shutdown
 import os
+from time import sleep as slp
 
-shutdown = input("desliga?: ")
+print('''
+  >>> DESLIGAMENTO PROGRAMADO <<<
+  
+Em quanto tempo o PC deve ser desligado?
 
-if shutdown == 'n':
-  exit()
+Insira o valor em minutos:
 
-else:
-  os.system("shutdown /s /t 3600")
+''')
+
+timeInput = int(input(">> "))
+
+def continueQuestion():
+  abortcount = input('deseja abortar?: ')
+  if abortcount == 's' or abortcount == 'S':
+    return os.system("shutdown /a")
+
+
+def getTimeTinputinSeconds(timeToShutdown):
+
+  convertedTime = timeToShutdown * 60
+
+  slp(3)
+  print(f'O computador irá se desigar em {convertedTime} segundos')
+  os.system(f'shutdown /s /t {convertedTime}')
+  
+  if convertedTime >= 60:
+    slp(5)
+    continueQuestion()
+
+getTimeTinputinSeconds(timeInput)
