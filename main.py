@@ -29,5 +29,6 @@ def getTimeTinputinSeconds(timeToShutdown):
   if convertedTime >= 60:
     slp(5)
     continueQuestion()
+    input("Você abortou a operação, pressione ENTER para fechar")
 
 getTimeTinputinSeconds(timeInput)
