@@ -23,7 +23,7 @@ def getTimeTinputinSeconds(timeToShutdown):
   convertedTime = timeToShutdown * 60
 
   slp(3)
-  print(f'O computador irá se desigar em {convertedTime} segundos')
+  print(f'O computador irá se desligar em {convertedTime} segundos')
   os.system(f'shutdown /s /t {convertedTime}')
   
   if convertedTime >= 60:
