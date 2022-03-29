@@ -15,7 +15,8 @@ class ScheduledShutdown():
       [sg.Multiline(key='Log'+sg.WRITE_ONLY_KEY, size=(40,5), disabled = True, no_scrollbar = True)],
       [sg.Button('Abortar Desligamento')]
     ]
-    self.mainWindow = sg.Window('Desligamento Automático', layout=layout, finalize=True)
+    self.mainWindow = sg.Window('Desligamento Automático', layout=layout, finalize=True, icon='.\public\icons\icon.ico')
+    self.mainWindow.set_icon(icon='.\public\icons\icon.ico')
 
   def startApp(self):
     while True:
