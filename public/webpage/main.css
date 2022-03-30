@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+}
+
+header {
+  padding: 2rem;
+  background-color: #009fe3;
+  color: #ffffff;
+}
+
+body {
+  overflow-x: hidden;
+  width: auto;
+}
+
+.main-container {
+  width: auto;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.download-versions {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.download-button {
+  width: 20rem;
+  height: 5rem;
+  margin: 1.5rem;
+  outline: none;
+  border: none;
+  background-color: #009fe3;
+  border-radius: 8px;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 20px;
+  transition-duration: 0.3s;
+}
+
+.download-button:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 0px 0px 20px 4px rgba(29, 113, 184, 0.5);
+}
+
+@media (min-width: 700px) {
+  .download-versions {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .download-button {
+    width: 20rem;
+    margin: 10px;
+  }
+
+  .instructions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    /*     grid-template-rows: 1fr 1fr; */
+    gap: 1rem;
+  }
+
+  .steps {
+    margin: 0;
+  }
+}
+
+.strong-bold,
+strong {
+  color: #153b50;
+}
+
+.instructions-area {
+  width: auto;
+  padding: 1.5rem;
+  display: grid;
+}
+
+.steps {
+  margin: 1rem 0;
+}
+
+.img-placeholder {
+  width: auto;
+  height: 15rem;
+  background-color: #c4c4c4;
+  margin: 1rem 2rem;
+}
+
+footer {
+  width: auto;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  color: #ffffff;
+  background-color: #153b50;
+  font-size: 0.8em;
+}
+
+footer a {
+  text-decoration: none;
+  color: #ffffff;
+}
